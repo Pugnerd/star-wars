@@ -1,0 +1,39 @@
+.dashboard {
+  background-color: azure;
+  display: block;
+  height: 70vh;
+  padding: 2vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  gap: 3vw;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dashboard .card {
+  padding: 20px;
+  border: solid 1px gray;
+  border-radius: 7px;
+  width: 25%;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+}
+
+.dashboard .card img {
+  float: right;
+  width: 100px;
+}
+
+.dashboard .card:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  background-color: yellowgreen;
+  cursor: pointer;
+}
+/*# sourceMappingURL=dashboard.css.map */

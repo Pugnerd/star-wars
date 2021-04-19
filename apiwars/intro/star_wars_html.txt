@@ -1,0 +1,21 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/style.css">
+	<title>API WARS</title>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="scroll-text">
+			<h1>API WARS</h1>
+			<h2>server.js</h2>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, incidunt? Modi excepturi nulla dolore ipsam quod laborum velit itaque sint alias ea! Consequuntur consectetur dolor assumenda in deserunt adipisci laborum?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, incidunt? Modi excepturi nulla dolore ipsam quod laborum velit itaque sint alias ea! Consequuntur consectetur dolor assumenda in deserunt adipisci laborum?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, incidunt? Modi excepturi nulla dolore ipsam quod laborum velit itaque sint alias ea! Consequuntur consectetur dolor assumenda in deserunt adipisci laborum?</p>
+			<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, incidunt? Modi excepturi nulla dolore ipsam quod laborum velit itaque sint alias ea! Consequuntur consectetur dolor assumenda in deserunt adipisci laborum?</p>
+
+		</div>
+	</div>
+</body>
+</html>

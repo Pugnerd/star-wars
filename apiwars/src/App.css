@@ -1,0 +1,219 @@
+html {
+  background-image: url(./img/sw_bg.jpg);
+  background-position: center;
+  background-size: cover;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(240, 255, 240, 0.1);
+}
+
+.navbar .navbar-expand-md .navbar-light {
+  -webkit-filter: blur(0.4px);
+          filter: blur(0.4px);
+}
+
+.bg-light {
+  background-color: #ffe81f !important;
+  opacity: .9;
+}
+
+/*
+not mibile friendly 
+.table-bordered, .table {
+    border: 1px solid #dee2e6;
+    min-width: 800px;
+} 
+*/
+.table td, .table th {
+  padding: .65rem;
+  vertical-align: top;
+  border-top: 1px solid #dee2e6;
+}
+
+.planetList {
+  background-color: white;
+  width: 100%;
+}
+
+.residents {
+  width: 80vw;
+  padding: 15px;
+}
+
+.voteStats {
+  width: 270px;
+  padding: 15px;
+}
+
+.react-bootstrap-tablwe, .tablwe {
+  width: 100vw;
+  max-width: 100vw;
+}
+
+.container {
+  width: 100vw !important;
+  z-index: 0;
+}
+
+.votes-wrapper, .login-wrapper, .modalwrapper {
+  position: absolute;
+  width: 100%;
+  background-color: #8080805e;
+  height: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.modal-dialog {
+  position: absolute;
+  border-radius: 7px;
+  max-width: inherit;
+  z-index: 1;
+}
+
+.vote {
+  padding: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#spinner {
+  height: 150px;
+  width: 150px;
+}
+
+/* credits to: https://codepen.io/wang0nya/pen/bzwQPr?editors=1010 */
+#spinner:not([hidden]) {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#spinner::after {
+  content: "";
+  width: 80px;
+  height: 80px;
+  border: 2px solid #f3f3f3;
+  border-top: 3px solid #f25a41;
+  border-radius: 100%;
+  will-change: transform;
+  -webkit-animation: spin 1s infinite linear;
+          animation: spin 1s infinite linear;
+}
+
+@-webkit-keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+.red {
+  color: red;
+}
+
+.login-wrapper {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-wrapper .login {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: honeydew;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 70%;
+  height: 70%;
+  min-height: 400px;
+  min-width: 300px;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: .3rem;
+  outline: 0;
+}
+
+.login-wrapper .login form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-wrapper .login .frmClose {
+  position: absolute;
+  right: 10px;
+  top: 0;
+}
+/*# sourceMappingURL=App.css.map */

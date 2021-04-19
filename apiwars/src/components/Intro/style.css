@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+html{
+ /*   background-image: url('https://wallpapertag.com/wallpaper/full/a/5/b/547899-large-star-sky-wallpaper-3100x1740-4k.jpg');*/
+    background-size: cover;
+    background-repeat: none;
+}
+
+body{
+ 
+
+}
+.white{color:white;}
+
+h1,h2,h3 {
+  text-align: center;
+}
+h1 {
+  font-size: 4em;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+h3 {
+  font-size: 2em;
+}
+pre{
+  color:yellow;
+  font-size:1.52em;
+}
+.code{
+  font-size:1em;
+  line-height: 1.8em;
+}
+.wbody {
+  /*background: rgb(20,20,20);*/
+ /* overflow: hidden;*/
+  font-family: 'Roboto';
+  /* push down the the wrapper by half the page */
+  margin: 50% 0 0 0;
+  position: relative;
+}
+.wbody::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  /* background to fade out the text as it goes up */
+  background: linear-gradient(180deg, rgba(20,20,20,1) 5%, rgba(20,20,20,0) 100%);
+}
+.wrapper {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  margin: 0 auto;
+  justify-content: center;
+  /* perspective gives us a 3d space within the element to work with*/
+  /* perspective also has the effect of pushing the content "down" */
+  perspective: 550px;
+}
+.start-animation{
+ animation: scroll 86s linear forwards;
+}
+
+.ibtn{
+  background-color: rgb(255 0 0 / 0%);
+  color: #ffe810;
+  outline: none;
+  border:1px solid #ffe810;
+  border-radius: 7px;
+}
+
+.scroll-text {
+ /* background-color:rgba(158, 158, 129,.4);*/
+  color: #ffc909;
+  font-size: 2vw;
+  line-height: 2em;
+  font-weight: bold;
+  text-align: justify;
+  position: relative;
+  padding-top: 50%;
+    
+}
+h1,h2 {
+  text-align: center;
+}
+
+@keyframes scroll {
+	from { top: 0; transform: translateZ(0) rotateX(20deg); }
+	to { top: -7500px; transform: translateZ(-3000px) rotateX(25deg); }
+}
+.start-skip-intro{
+  position: fixed;
+  top:50%;
+  left:45%;
+  z-index: 56;
+  transition: all 1s linear;
+}
+.starwar-audio{
+  z-index: 55; 
+  position: fixed;
+  top:10px;
+  opacity: 0;
+  transition: all 5s linear;
+}
+
+
+
+/* starwars logo*/
+
+
+.hide-star-wars-logo{
+ 
+  transform:scale(.0);
+}
+.wrapper-star-wars-logo{
+  position: fixed;
+  display: block;
+  width: 100vw;
+  top:30vh;
+  transition: all 5s linear;
+  display: none;
+}
+.star-wars-logo{
+  
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}

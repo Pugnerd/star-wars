@@ -1,0 +1,89 @@
+{
+  "users": [
+    {
+      "id": "1614870232821",
+      "name": "w",
+      "email": "w@w",
+      "password": "$2b$10$vm/yyHqp44vtzTw764oCJO4HqQeLG/dbEmeD9CuGTOaX/DbEY1uba"
+    },
+    {
+      "id": "1614882485009",
+      "name": "Bognár Dávid",
+      "email": "bognardavid@gmail.com",
+      "password": "$2b$10$itV5urm23ovXXpfdHq9LA.5RGil5IajR.N5golNAyNUhOY117UCem"
+    }
+  ],
+  "count": 2,
+  "votes": [
+    {
+      "email": "w@w",
+      "datetime": "1614870396273",
+      "planet": "Tatooine"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614870451354",
+      "planet": "Alderaan"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614870456202",
+      "planet": "Tatooine"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614871932249",
+      "planet": "Rodia"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614892184579",
+      "planet": "Dagobah"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614892193613",
+      "planet": "Tatooine"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614892199562",
+      "planet": "Naboo"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614899184658",
+      "planet": "Tatooine"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614899330862",
+      "planet": "Tatooine"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614900758083",
+      "planet": "Hoth"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614940477530",
+      "planet": "Tatooine"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614940484101",
+      "planet": "Alderaan"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614940486269",
+      "planet": "Dagobah"
+    },
+    {
+      "email": "w@w",
+      "datetime": "1614940512734",
+      "planet": "Alderaan"
+    }
+  ]
+}

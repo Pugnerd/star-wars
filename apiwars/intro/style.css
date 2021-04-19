@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500;700&display=swap');
+
+html{
+    /* background-image: url('https://wallpapertag.com/wallpaper/full/a/5/b/547899-large-star-sky-wallpaper-3100x1740-4k.jpg'); */
+    background-image: url(../src/img/sw_bg.jpg);
+    background-size: cover;
+    background-repeat: none;
+}
+body {
+ /* background: rgb(20,20,20);*/
+  overflow: hidden;
+  font-family: 'Roboto';
+  /* push down the the wrapper by half the page */
+  margin: 50% 0 0 0;
+  position: relative;
+}
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  /* background to fade out the text as it goes up */
+  background: linear-gradient(180deg, rgba(20,20,20,1) 40%, rgba(20,20,20,0) 100%);
+}
+.wrapper {
+  display: flex;
+  height: 100%;
+  width: 60%;
+  margin: 0 auto;
+  /* perspective gives us a 3d space within the element to work with*/
+  /* perspective also has the effect of pushing the content "down" */
+  perspective: 450px;
+}
+.scroll-text {
+  color: #ffc909;
+  font-size: 1vw;
+  line-height: 1.5em;
+  font-weight: bold;
+  text-align: justify;
+  position: relative;
+<<<<<<< HEAD
+  top:500px;
+  animation: scroll 90s linear forwards;
+=======
+  animation: scroll 70s linear forwards;
+>>>>>>> 90973c271761f516756e6cac6e6210a0b9a1014e
+}
+h1,h2,h3 {
+  text-align: center;
+}
+h1 {
+  font-size: 400;
+}
+
+h2 {
+  font-size: 100;
+}
+
+h3 {
+  font-size: 80;
+}
+
+@keyframes scroll {
+	from { top: 500; transform: translateZ(0) rotateX(20deg); }
+	to { top: -7500px; transform: translateZ(-2500px) rotateX(21deg); }
+}

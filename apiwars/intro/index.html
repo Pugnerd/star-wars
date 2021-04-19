@@ -1,0 +1,260 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://allfont.net/allfont.css?fonts=star-jedi" rel="stylesheet" type="text/css" />
+  <script src="./main.js"></script>
+  <title>Document</title>
+</head>
+
+<body>
+    <div class="starwar-audio" style="z-index: 55; position: absolute;">
+    <audio id="myAudio">
+        <source src="https://ia903204.us.archive.org/16/items/StarWarsThemeSongByJohnWilliams/Star%20Wars%20Theme%20Song%20By%20John%20Williams.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+      
+      
+      
+      <button id='play'   type="button">Play Audio</button>
+      <button id='pause'  type="button">Pause Audio</button> 
+      <div id="volume-controll">
+        <input type="range" id="volume-control">
+        </div>
+    </div>
+     
+
+   
+  <div class="wrapper">
+    <div id="scroll-text" class="scroll-text">
+      <h1>API WARS</h1> <br>
+      <h3>EPISODE XVI</h3> <br>
+      <h2>THE APP.JS</h2> <br>
+      <pre>
+      import React,{useState} from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import './App.css';
+import Dashboard from   './components/Dashboard/Dashboard.js';
+import Login from       './components/Login/Login2.js';
+import Navbar from      './components/Navbar/Navbar.js';
+import ModalVote from   './components/Modal/Modal.js';
+import Register from    './components/Register/Register.js';
+import Preferences from './components/Preferences/Preferences.js';
+
+import PlanetList from   './components/Planetlist/PlanetList.js';
+import useToken from    './useToken';
+
+//import 'bootstrap-dist-css-bootdtrap.min.css'
+import {Container, Row} from 'react-bootstrap';
+
+
+function App() {
+ 
+  // hogy be legyunk jelentkezve minden page refresh esetén is. 
+  (mert ha nincs SESSION akkor ujra be kellene login-olni)
+/*   const tokenString = sessionStorage.getItem('token');
+  const userToken = JSON.parse(tokenString); */
+
+  const {token, setToken } = useToken();
+  const [show, setShow ] = useState(false)
+  const [modalData, setModalData ] = useState('')
+
+
+  const showVotes= (e) =>{
+    e.preventDefault()
+    console.log('showVotes');
+    let planetvotes = [] // fetch from url....
+    setModalData({type:'VoteStats',  title:'Planet votes ', data: planetvotes})
+    setShow(true)
+  }
+
+  // logout
+  const removeToken = userToken => {
+    sessionStorage.removeItem('token');
+    setToken(null);
+    console.log('removing token');
+    //window.location="/";
+  };
+
+  if(!token) {
+    /* teljes login-is védelem esetén 
+
+     return Login setToken={setToken} 
+  }
+
+  return ( 
+    &lt;div className="wrapper">
+    {/* 
+      &lt;h3>API Wars{token}&lt;/h3> */}
+   {/*  &lt;button type="button" onClick={()=>showVotes()} class="btn btn-primary" 
+   data-toggle="modal" data-target=".bd-example-modal-sm">Small modal&lt;/button>
+       {window.location.pathname !== '/login' ? &lt;a href="/login">Login&lt;/a> : null} */}
+      &lt;Navbar email={token} removeToken={removeToken} showVotes={showVotes}/>
+
+      { /*!token ? null :  &lt;>&lt;a href="/dashboard">Dashboard&lt;/a> 
+       &lt;a href="/preferences">Preferences&lt;/a>&lt;button onClick={() => removeToken()} >
+       Logout&lt;/button>&lt;/>*/}
+
+
+    &lt;BrowserRouter>
+        &lt;Switch>
+        &lt;Route path="/dashboard">
+            &lt;Dashboard token={token}/>
+          &lt;/Route>
+          &lt;Route path="/preferences">
+            &lt;Preferences />
+          &lt;/Route>
+          &lt;Route  path={ "/votingstats" } component={() => &lt;Preferences /> }              />
+          &lt;Route  path={ "/login" }       component={() => &lt;Login setToken={setToken} />} />
+      
+          &lt;Route  path="/register">
+            &lt;Register />
+          &lt;/Route>
+        &lt;/Switch>
+      &lt;/BrowserRouter>
+     
+   &lt;Container>
+      &lt;Row>
+        &lt;div className="votes-wrapper" style={{display:show?'flex':'none'}}>
+           &lt;ModalVote show={show.toString()} setShow={setShow} modalData={modalData} />
+        &lt;/div>
+      &lt;/Row>
+      &lt;Row>
+        &lt;PlanetList show={show} setShow={setShow} setModalData={setModalData} token={token} />
+      &lt;/Row>
+    &lt;/Container>
+    &lt;/div>
+
+  );
+}
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+<p></p
+&lt;h2>Login.js&lt;/h2>
+import React, { useState } from 'react';
+//import PropTypes from 'prop-types';
+//import './Login.css';
+function handleErrors(response) {
+  if (!response.ok) {
+      throw Error(response.statusText);
+  }
+  return response;
+}
+
+async function loginUser(credentials,setData,setMessage) {
+ return await fetch('http://localhost:8080/login', {
+   method: 'POST',
+   headers: {
+     'Content-Type': 'application/json'
+   },
+   body: JSON.stringify(credentials)
+ })
+ .then(handleErrors)
+ .then( async function(response) {
+  console.log("ok");
+  const data = await response.json();
+  console.log('returned jsondata=',data);
+  setData(data);
+  if (data.message.indexOf('ok')>-1){
+     window.location='/'
+  }else{}
+  return data
+  })
+  .catch(function(error) {
+   const data ={message:'email or password incorrect. Please try again'}
+       setData(data);
+       setMessage(data);
+       console.log('err:',error,data);
+       return data
+   });/* 
+ .then(data => {
+   let adat =data.json() 
+  console.log('data=',adat);
+ return adat
+ }) */
+}
+
+export default function Login2(props) {
+  const [email, setEmail] = useState();
+  const [password, setPassword] = useState();
+  const [data, setData] = useState();
+  const [message, setMessage] = useState({message:'',id:null});
+
+  console.log('props=',props,data,message);
+  const handleSubmit = async e => {
+    e.preventDefault();
+    const token = await loginUser({
+      email,
+      password
+    },setData,setMessage);
+    
+    if (typeof(props.setToken) !== 'undefined'){
+    //  console.log('login setToken=',props.setToken);
+      props.setToken(token);
+    }else{
+      console.log('no SetToken');
+    }
+   
+  }
+/* if (typeof(email) !== 'undefined')
+  return (email) */
+  return(
+   
+    &lt;div className="login-wrapper">
+      &lt;div className='login'>
+      &lt;a className='frmClose close' onClick={()=> window.location="/" } 
+      href='/'>&lt;span aria-hidden="true">×&lt;/span>&lt;/a>
+ 
+      &lt;h3>Please Log In&lt;/h3>
+      &lt;p>{message.message}&lt;/p>
+      &lt;form onSubmit={handleSubmit}>
+        &lt;label>
+          &lt;p>Email&lt;/p>
+          &lt;input type="email" onChange={e => setEmail(e.target.value)} />
+        &lt;/label>
+        &lt;label>
+          &lt;p>Password&lt;/p>
+          &lt;input type="password" onChange={e => setPassword(e.target.value)} />
+        &lt;/label>
+        &lt;div>
+          &lt;button className="btn btn-success" type="submit">Login&lt;/button>
+           &nbsp; &nbsp; &nbsp; &lt;a className="btn btn-primary" href="/register">Register&lt;/a>
+        &lt;/div>
+      &lt;/form>
+      &lt;/div>
+    &lt;/div>
+  )
+}
+
+/* Login.ppropTypes = {
+  setToken: pPropTypes.func.isRrequired
+}; */
+</pre>
+  </div>
+  
+</body>
+</html>
