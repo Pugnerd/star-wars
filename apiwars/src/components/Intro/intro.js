@@ -83,65 +83,13 @@ function intro() {
                           <br/>
                           
 
-                            <pre>
-                                {`
-                Réges régen, 2020 október 26-án elindult
-                a CodeCOOL frontend fejlesztés tanfolyam.
-
-                Nagy szenvedések árán, bagollyá alakultunk,
-                  de közben az erő és a nagy JODA mester 
-
-                            alias @RICHARDatom
-
-                    kitartóan bíztatott és velünk volt!
-
-                      Átvállalt nagyon sok munkát,
-                     állami online vizsga kérdések,  
-                        6x6 teszt megírása, hogy 
-                            éltessen az erő.
-                
-                        NAGYON KÖSZÖNJÜK Richárd!
-                       Az összes FE csoport nevében.
-                        
-                           Mit szeretsz inni? 
-                    Unicum, Whiskey, sör, bor, pálinka ?
-                       (vagy ebbe a sorrendbe ? )
-
-                Ennek köszönhetően sikerült eljutni, hogy
-                       a 16-ik heti csoport feladat 
-                              a FE2T6 csapata
-                          Móni, Erika, Ágó, Dani, 
-                  Journey Passport Solo (nem a Han Solo),
-                Google, StackOverflow, Youtube segítségével
-                        megcsinálta.(hihetetlen...)
-
-                           Megtanítottál tanulni, 
-                    a Google-t és Stackoverflow-t használni.
-                    
-                           A HATÁR A CSILLAGOS ÉG!
-
-                 Ez az intró e videó útmutatásával készült el.
-                  https://www.youtube.com/watch?v=kHrV2ZHzF-0
-                 
-
-                             B E M U T A T J U K 
-                  
-                     a React-os frontend STAR Wars API-t
-                      Bootstrap és Express.js backend-el.
-                                `}
-                            </pre>
+                            
                                <br/>      
                                <h2>THE App.js</h2> 
                                <br/>      
                             <pre className="code">
                                 {`
-                    /* credits to:
-                    
-                    Journey Solo Passport
-                    https://www.digitalocean.com//tutorials/how-to-add-login-authentication-to-react-applications
-                    https://www.youtube.com/watch?v=-RCnNyD0L-s&ab_channel=WebDevSimplified
-
-                    */                  
+                                  
 
                     import React,{useState} from 'react';
                     import { BrowserRouter, Route, Switch } from 'react-router-dom';
